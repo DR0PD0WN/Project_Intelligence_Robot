@@ -1,6 +1,6 @@
-# eduro_flutter
+# Intelligence_flutter
 
-Porject II
+Project I
 
 ## Getting Started
 
