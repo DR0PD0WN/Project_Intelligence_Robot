@@ -90,7 +90,7 @@ class FunctionMenu extends StatelessWidget {
           SizedBox(
             height: sizeBox,
           ),
-          /*RaisedButton(
+          RaisedButton(
             padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
             color: Colors.indigo[900],
             child: Row(
@@ -109,7 +109,7 @@ class FunctionMenu extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => MaterialApp(home: ControlMenu())));
             },
-          ),*/
+          ),
         ],
       ),
     );
