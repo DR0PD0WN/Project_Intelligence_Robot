@@ -7,6 +7,7 @@ import 'package:hardware_buttons/hardware_buttons.dart' as HardwareButtons;
 import 'package:speech_to_text/speech_to_text.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_recognition_error.dart';
+import 'package:speech_recognition/speech_recognition.dart';
 
 // Global Var! Zone
 final FlutterTts flutterTts = FlutterTts(); // Create FlutterTTS Instance
@@ -58,9 +59,8 @@ class _VoiceAssistantState extends State<VoiceAssistant> {
   void Speak(Words) async {
     // Text-to-Speech
     await flutterTts.setLanguage("th-TH");
-    await flutterTts.speak(Words);
+    await flutterTts.speak(Words); //เปลี่ยน Words เป็น text
   }
-
   // --! It May be bugg! lol -->
 
   void DialogResp(query) async {

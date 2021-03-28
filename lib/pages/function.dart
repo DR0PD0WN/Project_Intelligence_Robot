@@ -92,7 +92,7 @@ class FunctionMenu extends StatelessWidget {
           ),
           RaisedButton(
             padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-            color: Colors.indigo[900],
+            color: Colors.green[300],
             child: Row(
               children: <Widget>[
                 Icon(Icons.play_arrow, color: Colors.white),

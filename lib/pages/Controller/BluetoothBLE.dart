@@ -12,7 +12,7 @@ class BluetoothBLE extends StatefulWidget {
 class _BluetoothBLEState extends State<BluetoothBLE> {
   final String SERVICE_UUID = "0000ffe0-0000-1000-8000-00805f9b34fb";
   final String CHARACTERISTIC_UUID = "0000ffe1-0000-1000-8000-00805f9b34fb";
-  final String TARGET_DEVICE_NAME = "BT05";
+  final String TARGET_DEVICE_NAME = "MLT-BT05";
 
   FlutterBlue flutterBlue = FlutterBlue.instance;
   StreamSubscription<ScanResult> scanSubScription;
@@ -177,7 +177,7 @@ class _BluetoothBLEState extends State<BluetoothBLE> {
                             writeData("left");
                           },
                         ),
-                        SizedBox(width : 10),
+                        SizedBox(width: 10),
                         RaisedButton(
                           color: Colors.redAccent,
                           padding: EdgeInsets.symmetric(
@@ -191,7 +191,7 @@ class _BluetoothBLEState extends State<BluetoothBLE> {
                             writeData("backward");
                           },
                         ),
-                        SizedBox(width : 10),
+                        SizedBox(width: 10),
                         RaisedButton(
                           color: Colors.redAccent,
                           padding: EdgeInsets.symmetric(
@@ -206,7 +206,27 @@ class _BluetoothBLEState extends State<BluetoothBLE> {
                           },
                         ),
                       ],
-                    )
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        SizeBoxSpace(),
+                        RaisedButton(
+                          color: Colors.redAccent,
+                          padding: EdgeInsets.symmetric(
+                            vertical: buttonDim,
+                          ),
+                          child: Text('Stop',
+                              style: TextStyle(
+                                  fontSize: fontSize, color: Colors.white)),
+                          onPressed: () {
+                            print("Pressed S");
+                            writeData("stop");
+                          },
+                        ),
+                        SizeBoxSpace(),
+                      ],
+                    ),
                   ],
                 ),
               ),
